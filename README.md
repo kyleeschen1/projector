@@ -5,7 +5,9 @@ Lisps are beautiful but syntactically-intimidating, leading many to dismiss them
 
 To make the language more accessible, I am trying to create a programn that will allow teachers to easily animate Lisp evaluation, so students can see how the abstract syntax trees unfurl, contract, and self-modify in real time. 
 
-My goal is to do an animated YouTube walkthrough of SICP - just one ignoramous enlightening others, but with excellent graphics. This current version is limited (with known issues laid out in src/projector/ast.clj), and more about programming principles than Clojure specifically (hence the unsavory use of "cons" below). However, I do think that it can serve as a good MVP. Here's how it works:
+My goal is to do an animated YouTube walkthrough of SICP - just one ignoramous enlightening others, but with excellent graphics. This current version is limited (with known issues laid out in src/projector/ast.clj), and more about programming principles than Clojure specifically (hence the unsavory use of "cons" below). However, I do think that it can serve as a good MVP.
+
+## Demo
 
 You define functions to animate in the animation file of the directory. Right now, the interpreter can parse only single-arity functions.
 
