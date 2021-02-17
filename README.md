@@ -1,5 +1,5 @@
 # Projector
-### Bringing Abstraction with Life
+### Bringing Abstraction to Life
 
 Lisps are beautiful but syntactically-intimidating, leading many to dismiss them. This is a shame for a number of reasons, one being that Lisps are excellent pedagogical vehicles. Many classic textbooks in programming and artificial intelligence (SICP, PAIP, The Little Schemer, etc.) use Lisp dialects. SICP alone proves that Lisp can serve as a kind of programming Rosetta Stone, using just a few primitives to implement the major paradigms of computer science. However, these texts are inaccessible to those who find Lisp to be indecipherable and / or infuriating.
 
