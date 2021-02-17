@@ -11,13 +11,13 @@ You define functions to animate in the animation file of the directory. Right no
 
 When you run the app, a very simple REPL launches. It does the usual REPL thing. 
 
-![alt text](https://github.com/kyleeschen1/projector/blob/master/images/map.gif)
+![alt text](https://github.com/kyleeschen1/projector/blob/main/images/map.gif)
 
 When you call ```(animate)```, the REPL will then flicker through the evaluation of the previous line, step by step. It can automatically walk through a small subset of Clojure, which can be further extended by adding to the file.
 
 I see this being used primarily as a teaching tool, where abstractions are made vivid through depiction as an unfolding process. For instance, below we see how two different approaches to writing a factorial procedure (recursive and iterative) will consume stack space, depicted by vertical depth.
 
-![alt text](https://github.com/kyleeschen1/projector/blob/master/images/factorials.gif)
+![alt text](https://github.com/kyleeschen1/projector/blob/main/images/factorials.gif)
 
 Teachers can create assignments where students must solve problems within a constrained subset of Clojure functions. Students will be able to walk through code step by step to understand how all the functions fit together. I next want to make the animations responsive to key inputs, so that students can effortlessly stop, slow, speed, and rewind the animations. This allows students to zero in on the exact point where understanding breaks down. This is a resolution conducive to deliberate practice.
 
@@ -26,11 +26,11 @@ Teachers can create assignments where students must solve problems within a cons
 
 Behind the scenes, a "probe" catches a ride on an s-expression, and gathers evaluation data as it zips around the interpreter. This allows it to create a "script" of the evaluation. 
 
-![alt text](https://github.com/kyleeschen1/projector/blob/master/images/script.gif)
+![alt text](https://github.com/kyleeschen1/projector/blob/main/images/script.gif)
 
 Each index corresponds to a node in the AST. One can filter, map, assoc, etc. over this script to customize the animations. You then feed the original expression, an environment, and the script into another function that will generate intermediate states of the program (or at least those covered by my currently impotent interpreter):
 
-![alt text](https://github.com/kyleeschen1/projector/blob/master/images/frames.gif)
+![alt text](https://github.com/kyleeschen1/projector/blob/main/images/frames.gif)
 
 These "frames" constitute a little film reel of the animation. Each is already indexed, and can be turned into a zipper so that students can stop the animation and zip around to various components. (This part will require I add the keypress portion discussed above).
 
