@@ -1,5 +1,5 @@
 # Projector
-### Infusing Abstractions with Life
+### Bringing Abstraction with Life
 
 Lisps are beautiful but syntactically-intimidating, leading many to dismiss them. This is a shame for a number of reasons, but one is that Lisps are excellent pedagogical vehicles. Many classic programming texts (SICP, PAIP, The Little Schemer, etc.) use Lisp dialects. SICP alone proves that Lisp can serve as a kind of programming lingua franca, where all major programming paradigms are only several steps away from a few core primitives. However, these texts are inaccessible to those who find Lisp to be indecipherable and / or infuriating.
 
