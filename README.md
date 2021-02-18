@@ -7,11 +7,11 @@ Lisp dialects are beautiful but syntactically-intimidating, leading many to dism
 
 To make the language more accessible, I am trying to create a program that will allow teachers to easily animate Lisp evaluation, so students can see how the abstract syntax trees unfurl, contract, and self-modify in real time. 
 
-My goal is to do an animated YouTube walkthrough of SICP - just one ignoramous enlightening others, but with excellent graphics. This current version is limited (with known issues recorded next in the [code itself](https://github.com/kyleeschen1/projector/blob/main/src/projector/ast.clj)), and geared toward illustrating general programming principles rather than idiomatic Clojure. However, I do think that it can serve as a good MVP.
+My goal is to do an animated YouTube walkthrough of SICP - just one ignoramous enlightening others, but with excellent graphics. This current version is limited (with known issues recorded next to the [code itself](https://github.com/kyleeschen1/projector/blob/main/src/projector/ast.clj)), and geared toward illustrating general programming principles rather than idiomatic Clojure. However, I do think that it can serve as a good MVP.
 
 ## Demo
 
-You define functions to animate in the animation file of the directory. Right now, the interpreter can parse only single-arity functions, but within those constraints the formatting is identical.
+To make a function available for animation, you write it in the animation file of the directory. Right now, the interpreter can parse only non-variadic functions, but given that the formatting is identical.
 
 ![alt text](https://github.com/kyleeschen1/projector/blob/main/images/Functions.png)
 
@@ -25,7 +25,7 @@ I see this used primarily as a teaching tool, where abstractions are made vivid 
 
 ![alt text](https://github.com/kyleeschen1/projector/blob/main/images/factorials.gif)
 
-Teachers can create assignments where students must solve problems within a constrained subset of Clojure functions. Students will be able to walk through code step by step to understand how all the functions fit together. I next want to make the animations responsive to key inputs, so that students can effortlessly stop, slow, speed, and rewind the animations. This allows students to zero in on the exact point where understanding breaks down. This is a resolution conducive to deliberate practice.
+Teachers can create assignments where students must solve problems within a constrained subset of Clojure functions. Students will be able to walk through code step by step to understand how all the functions fit together. I next want to make the animations responsive to key inputs, so that students can effortlessly stop, slow, speed, and rewind the animations. This allows students to zero in on the exact point where understanding breaks down, which in turn affords the kind of hyperfocused tuning that deliberate practice requires.
 
 
 ## How it Works
