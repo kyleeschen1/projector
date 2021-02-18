@@ -37,10 +37,11 @@
 ;; Add function level and expansion level indices
 
 
+
 ;;################################################################################
 ;; Evaluation
 ;;
-;; Credit to Tim Baldridge's self-interpreter for jumping off point for this evaluator.
+;; Credit to Tim Baldridge's self-interpreter as a jumping off point for -eval
 ;; https://github.com/halgari/clojure-tutorial-source/blob/master/src/interpreter/interpreter.clj
 
 
@@ -521,7 +522,7 @@
 
 (comment
 
-  ;; Some informal spot-checks that will get formalized
+  ;; Some quick spot-checks that will get formalized
   ;; into tests once I lock down the script format.
   
   ;; These work fine
@@ -583,7 +584,7 @@
 
 (t/deftest results
 
-  (let [correct-result?  (-> "sample.clj"
+  (let [correct-result?  (-> "animations/sample.clj"
                              gen-env-from-file
                              gen-result-checker)]
 
@@ -596,7 +597,7 @@
     ;; Do
     (correct-result? '(do (+ 1 2) (+ 2 3)) 5)
 
-    ;; Let (test parallel binds)
+    ;; Let (test sequential binds) This looks like it's going straight to eval
     (correct-result? '(let [x 1 y 3] (+ x y)) 4)
     (correct-result? '(let [x 1 y x z y] (+ x y z)) 3)
     (correct-result? '(let [x 3 y (factorial-rec x)] (+ x y)) 9)
