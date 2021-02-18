@@ -21,7 +21,7 @@ When you run the app, a very simple REPL launches. It does the usual REPL thing.
 
 When you call ```(animate)```, the REPL will then flicker through the evaluation of the previous line, step by step. It can automatically walk through a small subset of Clojure, which can be further extended by adding to the above mentioned animation file.
 
-I see this used primarily as a teaching tool, where abstractions are made vivid through its depiction as an unfolding process. For instance, below we see how two different approaches to writing a factorial procedure (recursive and iterative) will consume stack space, depicted by vertical depth.
+I see this used primarily as a teaching tool, where abstractions are made vivid through its depiction as an unfolding process. For instance, below we see how two different approaches to writing a factorial procedure (recursive and iterative) will consume stack space, depicted by depth.
 
 ![alt text](https://github.com/kyleeschen1/projector/blob/main/images/factorials.gif)
 
