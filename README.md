@@ -9,9 +9,7 @@ My goal is to do an animated YouTube walkthrough of SICP - just one ignoramous e
 
 ## Demo
 
-You define functions to animate in the animation file of the directory. Right now, the interpreter can parse only single-arity functions, but within those constraints the the format is identical.
-
-![alt text](https://github.com/kyleeschen1/projector/blob/main/images/Functions.png)
+You define functions to animate in the animation file of the directory. Right now, the interpreter can parse only single-arity functions, but within those constraints the formatting is identical.
 
 When you run the app, a very simple REPL launches. It does the usual REPL thing. 
 
