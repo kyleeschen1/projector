@@ -49,7 +49,7 @@ This list of "frames" constitute a little film reel of the animation. Each is al
 
   * One can envision a game-like curriculum where students try and "spot the similarities" in expressions, and the strobing provides rapid feedback about the patterns they did and did not detect.
 
-  * This is more speculative, but perhaps machine learning could "suggest" code regions ripe for refactoring by detecting and highlighting shared structure. Programmers can consider and apply the suggestions that make sense. The strobing allows for a visceral, succint, and precise depiction of the pattern that the machine wishes to convey.
+  * This is more speculative, but perhaps machine learning could "suggest" code regions ripe for refactoring by detecting and highlighting shared structure. Programmers can consider and apply the suggestions that make sense. The strobing allows for a succint and precise depiction of the pattern that the machine wishes to convey.
 
 * A more practical case: Whenever I start looking through a new repo on GitHub, I am confronted with a bunch of new functions defined in terms of new functions. Everything seems circular - I don't know where to start and where to go. I ulimately hope to write an interpreter that works on the AST output of clojure.tools.analyzer, so that I can download *any* Clojure library, and do a gradual stroll through the evalaution tree, step by step, seeing how how all the pieces fit together.
 
