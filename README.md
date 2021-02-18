@@ -28,7 +28,7 @@ Teachers can create assignments where students must solve problems within a cons
 
 Behind the scenes, a "probe" catches a ride on an s-expression, and gathers evaluation data as it zips around the interpreter. This allows it to create a "script" of the evaluation. 
 
-![alt text](https://github.com/kyleeschen1/projector/blob/main/images/script.gif)
+![alt text](https://github.com/kyleeschen1/projector/blob/main/images/script.gif=100x20)
 
 Each index corresponds to a node in the AST. One can filter, map, assoc, etc. over this script to customize the animations. You then feed the original expression, an environment, and the script into another function that will generate intermediate states of the program (or at least those covered by my currently impotent interpreter):
 
