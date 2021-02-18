@@ -11,6 +11,8 @@ My goal is to do an animated YouTube walkthrough of SICP - just one ignoramous e
 
 You define functions to animate in the animation file of the directory. Right now, the interpreter can parse only single-arity functions, but within those constraints the formatting is identical.
 
+![alt text](https://github.com/kyleeschen1/projector/blob/main/images/Functions.png=100x)
+
 When you run the app, a very simple REPL launches. It does the usual REPL thing. 
 
 ![alt text](https://github.com/kyleeschen1/projector/blob/main/images/map.gif)
@@ -28,7 +30,7 @@ Teachers can create assignments where students must solve problems within a cons
 
 Behind the scenes, a "probe" catches a ride on an s-expression, and gathers evaluation data as it zips around the interpreter. This allows it to create a "script" of the evaluation. 
 
-![alt text](https://github.com/kyleeschen1/projector/blob/main/images/script.gif=100x20)
+![alt text](https://github.com/kyleeschen1/projector/blob/main/images/script.gif)
 
 Each index corresponds to a node in the AST. One can filter, map, assoc, etc. over this script to customize the animations. You then feed the original expression, an environment, and the script into another function that will generate intermediate states of the program (or at least those covered by my currently impotent interpreter):
 
