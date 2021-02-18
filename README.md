@@ -1,7 +1,7 @@
 # Projector
 ### Bringing Abstraction to Life
 
-*"LISP has been jokingly described as "the most intelligent way to misuse a computer". I think that description a great compliment because it transmits the full flavor of liberation: it has assisted a number of our most gifted fellow humans in thinking previously impossible thoughts." - Edgar Dijkstra*
+*"Lisp has been jokingly described as "the most intelligent way to misuse a computer". I think that description a great compliment because it transmits the full flavor of liberation: it has assisted a number of our most gifted fellow humans in thinking previously impossible thoughts." - Edgar Dijkstra*
 
 Lisp dialects are beautiful but syntactically-intimidating, leading many to dismiss them. This is a shame because Lisps are excellent pedagogical vehicles. Many classic textbooks in programming and artificial intelligence ([SICP](https://www.amazon.com/Structure-Interpretation-Computer-Programs-Engineering/dp/0262510871/ref=pd_lpo_14_t_2/139-8855044-5241522?_encoding=UTF8&pd_rd_i=0262510871&pd_rd_r=6b59d653-6698-4867-b82f-9c081a881132&pd_rd_w=yjFXI&pd_rd_wg=YULvH&pf_rd_p=16b28406-aa34-451d-8a2e-b3930ada000c&pf_rd_r=XE210ZNMV225Y09XRQ3X&psc=1&refRID=XE210ZNMV225Y09XRQ3X), [PAIP](https://github.com/norvig/paip-lisp), [The Little Schemer](https://www.amazon.com/Little-Schemer-Daniel-P-Friedman/dp/0262560992), etc.) use Lisp throughout. SICP alone proves that Lisp can serve as a kind of programming Rosetta Stone, using just a few primitives to implement the major paradigms of computer science. However, these texts are inaccessible to those who find Lisp to be indecipherable and / or infuriating.
 
@@ -11,7 +11,7 @@ My goal is to do an animated YouTube walkthrough of SICP - just one ignoramous e
 
 ## Demo
 
-To make a function available for animation, you write it in the animation file of the directory. Right now, the interpreter can parse only non-variadic functions, but given that the formatting is identical.
+To make a function available for animation, you write define it in the animation folder. Right now, the interpreter can parse only non-variadic functions, but given that the formatting is identical.
 
 ![alt text](https://github.com/kyleeschen1/projector/blob/main/images/Functions.png)
 
@@ -30,7 +30,7 @@ Teachers can create assignments where students must solve problems within a cons
 
 ## How it Works
 
-Behind the scenes, a "probe" catches a ride on an s-expression, and gathers evaluation data as it zips around the interpreter. This allows it to create an indexed "script" of the evaluation, each which corresponds to a node in the AST.
+Behind the scenes, a "probe" catches a ride on an s-expression, and gathers evaluation data as it zips around the interpreter. This allows it to create an indexed "script" of the evaluation. Each index corresponds to a node in the AST.
 
 ![alt text](https://github.com/kyleeschen1/projector/blob/main/images/script.gif)
 
