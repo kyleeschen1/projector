@@ -1,6 +1,8 @@
 # Projector
 ### Bringing Abstraction to Life
 
+*"LISP has been jokingly described as "the most intelligent way to misuse a computer". I think that description a great compliment because it transmits the full flavor of liberation: it has assisted a number of our most gifted fellow humans in thinking previously impossible thoughts." - Edgar Dijkstra*
+
 Lisps are beautiful but syntactically-intimidating, leading many to dismiss them. This is a shame for a number of reasons, one being that Lisps are excellent pedagogical vehicles. Many classic textbooks in programming and artificial intelligence (SICP, PAIP, The Little Schemer, etc.) use Lisp dialects. SICP alone proves that Lisp can serve as a kind of programming Rosetta Stone, using just a few primitives to implement the major paradigms of computer science. However, these texts are inaccessible to those who find Lisp to be indecipherable and / or infuriating.
 
 To make the language more accessible, I am trying to create a program that will allow teachers to easily animate Lisp evaluation, so students can see how the abstract syntax trees unfurl, contract, and self-modify in real time. 
@@ -47,7 +49,7 @@ This list of "frames" constitute a little film reel of the animation. Each is al
 
   * One can envision a game-like curriculum where students try and "spot the similarities" in expressions, and the strobing provides rapid feedback about the patterns they did and did not detect.
 
-  * This is more speculative, but perhaps ML could be used to "suggest" areas for abstraction by detecting and highlighting shared structure. Programmers can consider and apply the suggestions that make sense. The strobing allows for a visceral, succint, and precise depiction of the exact pattern that the machine wishes to convey.
+  * This is more speculative, but perhaps machine learning could "suggest" code regions ripe for refactoring by detecting and highlighting shared structure. Programmers can consider and apply the suggestions that make sense. The strobing allows for a visceral, succint, and precise depiction of the exact pattern that the machine wishes to convey.
 
 * A more practical case: Whenever I start looking through a new repo on GitHub, I am confronted with a bunch of new functions defined in terms of new functions. Everything seems circular - I don't know where to start and where to go. I ulimately hope to write an interpreter that works on the AST output of clojure.tools.analyzer, so that I can download *any* Clojure library, and do a gradual stroll through the evalaution tree, step by step, seeing how how all the pieces fit together.
 
