@@ -2,9 +2,7 @@
 (ns projector.scratch.musings
   (:require
    [clojure.repl :refer [source]]
-   [clojure.walk :as w]
-   [rewrite-clj.node :as n]
-   [rewrite-clj.zip :as z]))
+   [clojure.walk :as w]))
 
 ;;================================================================================
 ;; Miscellaneous Code (Ignore)
@@ -19,7 +17,33 @@
 
 
 ;;================================================================================
-;; Dataflow Programming (Ignore)
+;; Core Async Practice
+;; From https://www.braveclojure.com/core-async/
+
+(require '[clojure.core.async
+             :as a
+             :refer [>! <! >!! <!! go chan buffer close! thread
+                     alts! alts!! timeout]])
+
+(comment
+
+  (def echo-chan (chan 2))
+  (go (println (<! echo-chan)))
+  (>!! echo-chan "ketchup")
+  (>!! echo-chan "mustard")
+
+  (def hi-chan (chan))
+  (doseq [n (range 1000)]
+    (go (>! hi-chan (str "hi " n))))
+
+  (<!! hi-chan)
+
+  (close! echo-chan)
+  (close! hi-chan))
+
+
+;;================================================================================
+;; Dataflow Programming (Practice from Tim Baldridge tutorials)
 
 
 (defrecord Graph [nodes links])
@@ -110,7 +134,7 @@
 
 
 ;;################################################################################
-;; Logic Programming
+;; Logic Programming (Practice from Tim Baldridge tutorials... might be useful)
 
 (defn lvar
 

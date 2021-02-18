@@ -468,7 +468,7 @@
                      (zip/root)))]
     (reduce inject
             (zip/root loc)
-            (reverse stack))))
+            (reverse stack)))) ;; <- an evil that comes from my inability to build the stack in an order that doesn't evaluate quoted forms
 
 
 (defn strip-var-of-ns [v]
@@ -620,7 +620,7 @@
     (correct-result? '(reduce + '(1 2 3 4 5 6)) 21)
     (correct-result? '(reduce +  [1 2 3 4 5 6]) 21))) 
 
-(when false
+(when true
   (t/run-tests))
 
 
