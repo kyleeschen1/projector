@@ -17,7 +17,7 @@
 ;; - When displaying values for vars in closures, I  miss values that are assigned
 ;;   at closure creation because I subset the bindings on parameter names.
 ;;
-;; - Importing only works for single-arity functions.
+;; - Importing only works for non-variadic functions.
 ;;
 ;; - Evaluator errors when direct macro calls are made during the animation. I believe
 ;;   that this is because our symbol resolution works differently for macros that most vars.
