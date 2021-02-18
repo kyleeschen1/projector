@@ -5,19 +5,21 @@ Lisps are beautiful but syntactically-intimidating, leading many to dismiss them
 
 To make the language more accessible, I am trying to create a program that will allow teachers to easily animate Lisp evaluation, so students can see how the abstract syntax trees unfurl, contract, and self-modify in real time. 
 
-My goal is to do an animated YouTube walkthrough of SICP - just one ignoramous enlightening others, but with excellent graphics. This current version is limited (with known issues laid out in src/projector/ast.clj), and more about programming principles than Clojure specifically (hence the unsavory use of "cons" below). However, I do think that it can serve as a good MVP.
+My goal is to do an animated YouTube walkthrough of SICP - just one ignoramous enlightening others, but with excellent graphics. This current version is limited (with known issues laid out in src/projector/ast.clj), and more about programming principles than Clojure specifically. However, I do think that it can serve as a good MVP.
 
 ## Demo
 
-You define functions to animate in the animation file of the directory. Right now, the interpreter can parse only single-arity functions, but other than that, function definition is identical. 
+You define functions to animate in the animation file of the directory. Right now, the interpreter can parse only single-arity functions, but within those constraints the the format is identical.
+
+![alt text](https://github.com/kyleeschen1/projector/blob/main/images/Functions.png)
 
 When you run the app, a very simple REPL launches. It does the usual REPL thing. 
 
 ![alt text](https://github.com/kyleeschen1/projector/blob/main/images/map.gif)
 
-When you call ```(animate)```, the REPL will then flicker through the evaluation of the previous line, step by step. It can automatically walk through a small subset of Clojure, which can be further extended by adding to the file.
+When you call ```(animate)```, the REPL will then flicker through the evaluation of the previous line, step by step. It can automatically walk through a small subset of Clojure, which can be further extended by adding to the above mentioned animation file.
 
-I see this used primarily as a teaching tool, where abstractions are made vivid through depiction as an unfolding process. For instance, below we see how two different approaches to writing a factorial procedure (recursive and iterative) will consume stack space, depicted by vertical depth.
+I see this used primarily as a teaching tool, where abstractions are made vivid through its depiction as an unfolding process. For instance, below we see how two different approaches to writing a factorial procedure (recursive and iterative) will consume stack space, depicted by vertical depth.
 
 ![alt text](https://github.com/kyleeschen1/projector/blob/main/images/factorials.gif)
 
@@ -34,7 +36,7 @@ Each index corresponds to a node in the AST. One can filter, map, assoc, etc. ov
 
 ![alt text](https://github.com/kyleeschen1/projector/blob/main/images/frames.gif)
 
-These "frames" constitute a little film reel of the animation. Each is already indexed, and can be turned into a zipper so that students can stop the animation and zip around to various components. (This part will require I add the keypress portion discussed above).
+This list of "frames" constitute a little film reel of the animation. Each is already indexed, and can be turned into a zipper so that students can stop the animation and zoom around to various components. (This part will require I add the keypress portion discussed above.)
 
 
 ## Other Uses
