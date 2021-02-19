@@ -11,7 +11,7 @@ My goal is to do an animated YouTube walkthrough of SICP - just one ignoramous e
 
 ## Demo
 
-To make a function available for animation, you define it in the animation directory. Right now, the interpreter can parse only non-variadic functions, but given that the formatting is identical.
+To make a function available for animation, you define it in the animation directory in the typical way. Right now, the interpreter can parse only non-variadic functions.
 
 ![alt text](https://github.com/kyleeschen1/projector/blob/main/images/Functions.png)
 
