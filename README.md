@@ -15,7 +15,7 @@ To make a function available for animation, you define it in the animation direc
 
 ![alt text](https://github.com/kyleeschen1/projector/blob/main/images/Functions.png)
 
-When you run the app, a very simple REPL launches. It does the usual REPL thing. 
+```lein run -m projector.core``` will launch a very simple REPL launch. It does the usual REPL thing. 
 
 ![alt text](https://github.com/kyleeschen1/projector/blob/main/images/map.gif)
 
