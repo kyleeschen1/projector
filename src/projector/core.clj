@@ -3,6 +3,6 @@
    [projector.ast :refer [gen-env-from-file]]
    [projector.repl :refer [repl]]))
 
-(defn -main [file]
-  (let [env (gen-env-from-file file)]
+(defn -main []
+  (let [env (gen-env-from-file "animations/sample.clj")]
     (repl env)))
